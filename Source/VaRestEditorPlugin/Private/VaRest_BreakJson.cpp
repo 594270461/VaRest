@@ -5,7 +5,7 @@
 #include "VaRest_BreakJson.h"
 
 #include "Runtime/Launch/Resources/Version.h"
-#include "EdGraphUtilities.h"
+#include "Editor/UnrealEd/Public/EdGraphUtilities.h"
 
 #define LOCTEXT_NAMESPACE "VaRest_BreakJson"
 
@@ -61,7 +61,7 @@ public:
 #if ENGINE_MINOR_VERSION >= 13
 				FieldNameTerm->SourcePin = Pin;
 #else
-				FieldNameTerm->Source = Pin;
+				FieldNameTerm->Source = reinterpret_cast<UObject*>(Pin);
 #endif
 				FieldNameTerm->Name = FieldName;
 				FieldNameTerm->TextLiteral = FText::FromString(FieldName);
