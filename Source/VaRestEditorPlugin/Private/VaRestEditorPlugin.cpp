@@ -4,7 +4,7 @@
 #include "VaRestEditorPluginPrivatePCH.h"
 #include "VaRestEditorPlugin.h"
 
-#define LOCTEXT_NAMESPACE "FVaRestEditorPluginModule"
+// #define LOCTEXT_NAMESPACE "FVaRestEditorPluginModule"
 
 void FVaRestEditorPluginModule::StartupModule()
 {
@@ -17,6 +17,6 @@ void FVaRestEditorPluginModule::ShutdownModule()
 	// we call this function before unloading the module.
 }
 
-#undef LOCTEXT_NAMESPACE
+// #undef LOCTEXT_NAMESPACE
 	
 IMPLEMENT_MODULE(FVaRestEditorPluginModule, VaRestEditorPlugin)
